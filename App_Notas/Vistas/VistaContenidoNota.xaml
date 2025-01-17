@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Notas.Vistas.VistaContenidoNota">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Editar"
+                     Clicked="ActivarEdicion"/>
+        <ToolbarItem Text="Eliminar"
+                     Clicked="EliminarNota"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label x:Name="Titulo" 
+                       TextColor="Black"
+                       FontSize="24"
+                       FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"/>
+
+                <Frame x:Name="BordeTitulo"
+                       CornerRadius="0" 
+                       Padding="10" 
+                       BackgroundColor="White"
+                       HasShadow="False" 
+                       BorderColor="Black"
+                       IsVisible="False">
+
+                    <Entry x:Name="Titulo_Edicion" 
+                           IsVisible="False"
+                           FontSize="24"
+                           FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"/>
+
+
+                </Frame>
+
+                <Frame x:Name="BordeContenido"
+                       CornerRadius="0" 
+                       Padding="10" 
+                       BackgroundColor="White"
+                       HasShadow="False" 
+                       BorderColor="Black"
+                       IsVisible="False">
+
+                    <Editor x:Name="Contenido_Edicion" 
+                            AutoSize="TextChanges"
+                            IsVisible="False"
+                            FontSize="16"
+                            FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"/>
+                </Frame>
+
+
+                <Label x:Name="Contenido" 
+                       TextColor="Black"
+                       FontSize="16"
+                       FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"/>
+
+
+                <Button x:Name="btn_guardado"
+                        Text="Guardar" 
+                        FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular" 
+                        TextTransform="None"
+                        CornerRadius="10"
+                        HorizontalOptions="Center"
+                        IsVisible="False"
+                        VerticalOptions="EndAndExpand"
+                        Clicked="GuardarEdicion"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

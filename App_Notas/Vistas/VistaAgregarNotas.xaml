@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Notas.Vistas.VistaAgregarNotas">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label x:Name="aux" TextColor="Black"/>
+                <Frame x:Name="BordeTitulo"
+           CornerRadius="0" 
+           Padding="10" 
+           BackgroundColor="White"
+           HasShadow="False" 
+           BorderColor="Black">
+
+                    <Entry x:Name="Titulo" 
+               Placeholder="Titulo" 
+               PlaceholderColor="Gray"
+               FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"
+               BackgroundColor="Transparent"
+               TextColor="Black"/>
+                </Frame>
+
+                <Frame x:Name="BordeContenido"
+           CornerRadius="0" 
+           Padding="10" 
+           BackgroundColor="White"
+           HasShadow="False" 
+           BorderColor="Black">
+
+                    <Editor x:Name="Contenido" 
+                Placeholder="Contenido (opcional)" 
+                PlaceholderColor="Gray" 
+                HeightRequest="200" 
+                FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"
+                BackgroundColor="#FFF" TextColor="Black"/>
+
+                </Frame>
+
+                <Label Text="Categoria de nota" 
+           TextColor="Black"
+           FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"
+           HorizontalOptions="Center"/>
+
+                <Picker x:Name="Categorias"
+            TextColor="Black" 
+            HorizontalTextAlignment="Center"
+                        HorizontalOptions="CenterAndExpand">
+                    <Picker.Items>
+                        <x:String>Importante</x:String>
+                        <x:String>Recordatorio</x:String>
+                        <x:String>Tarea</x:String>
+                        <x:String>Actividad</x:String>
+                        <x:String>Otra</x:String>
+                    </Picker.Items>
+                </Picker>
+
+
+                <Label Text="Color de nota" 
+           TextColor="Black"
+           FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"
+           HorizontalOptions="Center"/>
+
+                <FlexLayout HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                JustifyContent="Center" 
+                AlignItems="Center" 
+                Direction="Row">
+
+                    <Button CornerRadius="100"
+                HeightRequest="40"
+                WidthRequest="50" 
+                Margin="10" 
+                Clicked="CambiarColor" 
+                BackgroundColor="#46494c"/>
+
+                    <Button CornerRadius="100"
+                HeightRequest="40"
+                WidthRequest="50"  
+                Margin="10" 
+                Clicked="CambiarColor" 
+                BackgroundColor="#ffc43d"/>
+
+                    <Button CornerRadius="100" 
+                HeightRequest="40"
+                WidthRequest="50" 
+                Margin="10" 
+                Clicked="CambiarColor"
+                BackgroundColor="#ef476f"/>
+
+                    <Button CornerRadius="100" 
+                HeightRequest="40"
+                WidthRequest="50" 
+                Margin="10" 
+                Clicked="CambiarColor"
+                BackgroundColor="#1b9aaa"/>
+
+                    <Button CornerRadius="100"
+                HeightRequest="40"
+                WidthRequest="50" 
+                Margin="10"
+                Clicked="CambiarColor" 
+                BackgroundColor="#06d6a0"/>
+                </FlexLayout>
+
+
+                <Button Text="Crear nota" 
+            Clicked="AgregarNota" 
+            CornerRadius="20"
+            Margin="10" 
+            BackgroundColor="#1b3a4b"
+            FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"
+            TextTransform="None" HorizontalOptions="Center"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

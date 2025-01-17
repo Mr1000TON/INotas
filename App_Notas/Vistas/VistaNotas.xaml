@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Notas.Vistas.VistaNotas">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Acerca de" Order="Secondary" Clicked="AbrirAcerdaDe"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label x:Name="aux"
+                   IsVisible="False"
+                   TextColor="Black" 
+                   FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"
+                   Margin="0,20,0,0" 
+                   FontSize="20"
+                   HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+            <ActivityIndicator x:Name="Carga"
+                               IsRunning="True" 
+                               IsVisible="False"
+                               Color="Black" 
+                               HorizontalOptions="CenterAndExpand" 
+                               VerticalOptions="CenterAndExpand"/>
+
+            <ScrollView  x:Name="Contenido"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         IsVisible="False">
+
+                <StackLayout x:Name="Muestra">
+
+                </StackLayout>
+
+            </ScrollView>
+
+            <Button x:Name="btn_agregar"
+                    Clicked="AbrirCreacionNota"
+                    Text="+" 
+                    TextColor="White" 
+                    TextTransform="None" 
+                    FontFamily="RoobertPRO-Regular.ttf#RoobertPRO-Regular"
+                    FontSize="20"
+                    BackgroundColor="#1b3a4b"
+                    CornerRadius="100"  
+                    HorizontalOptions="CenterAndExpand" 
+                    Margin="0,0,0,20"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
